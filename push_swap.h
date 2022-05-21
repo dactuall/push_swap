@@ -20,7 +20,7 @@ int ft_isdigit(char c);
 int ft_issign(char  c);
 int ft_exit_error_free(char *error, int *arr_num, char  **arr_split);
 /*FILE: ft_atoi.c*/
-int ft_atoi(char    *str, int   *arr_num, char  **arr_split);
+int ft_atoi(const char    *str, int   *arr_num, char  **arr_split);
 /*FILE: ft_split_utils.c*/
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 size_t	ft_strlen(const char *s);

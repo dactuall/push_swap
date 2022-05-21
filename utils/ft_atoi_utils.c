@@ -42,7 +42,7 @@ int ft_exit_error_free(char *error, int *arr_num, char  **arr_split)
     arr_split_p = arr_split;
     while (*arr_split_p)
     {
-        free(arr_split_p);
+        free(*arr_split_p);
         arr_split_p++;
     }
     free(arr_split);

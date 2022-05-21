@@ -20,11 +20,11 @@ int	*ft_validation(char	**argv)
 		arr_split = ft_split(argv[i], ' ');
 		size = 0;
 		while (arr_split[size])
-			arr_num[k++] = ft_atoi(arr_split[size++], arr_num, arr_split);
+			(arr_num)[k++] = ft_atoi(arr_split[size++], arr_num, arr_split);
 		ft_free_arr_split(arr_split, size);
 	}
-	//ft_check_dup(arr_num, ft_nums_count(argv));
-	//ft_check_sort(arr_num, ft_nums_count(argv));
+	ft_check_dup(arr_num, ft_nums_count(argv));
+	ft_check_sort(arr_num, ft_nums_count(argv));
 	return (arr_num);
 }
 
