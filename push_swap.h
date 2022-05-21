@@ -1,10 +1,20 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-# define ERROR "Error"
+# define ERROR1 "Error1\n"
+# define ERROR2 "Error2\n"
+# define ERROR3 "Error3\n"
+# define ERROR4 "Error4\n"
+# define ERROR5 "Error5\n"
+# define ERROR6 "Error6\n"
+# define ERROR7 "Error7\n"
+# define ERROR8 "Error8\n"
+# define ERROR9 "Error9\n"
 
 #include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
 /*FILE: ft_atoi_utils.c*/
-int ft_isint(long   x);
+int ft_isint(long long int	x);
 int ft_isspace(char c);
 int ft_isdigit(char c);
 int ft_issign(char  c);
@@ -30,5 +40,4 @@ int     ft_nums_count(char	**argv);
 void    ft_putstr(char  *str);
 int	    ft_exit_error(char	*error);
 char	**ft_free_arr_split(char	**arr_split, int size);
-
 # endif

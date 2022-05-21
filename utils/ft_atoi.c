@@ -2,6 +2,7 @@
 
 int ft_atoi_logic(char  *str, int   i, int  *arr_num, char  **arr_split)
 {
+	printf("ErrorAtoi2\n");
     long long int   x;
 
     x = 0;
@@ -11,22 +12,23 @@ int ft_atoi_logic(char  *str, int   i, int  *arr_num, char  **arr_split)
         i++;
     }
     if (str[i] != '\0')
-        return (ft_exit_error_free(ERROR, arr_num, arr_split));
+        return (ft_exit_error_free(ERROR3, arr_num, arr_split));
     if (str[0] != '-' && ft_isint(x))
         return (x);
     else if (str[0] == '-' && ft_isint(-x))
         return (-x);
     else
-        return (ft_exit_error_free(ERROR, arr_num, arr_split));
+        return (ft_exit_error_free(ERROR4, arr_num, arr_split));
 }
 
 int ft_atoi(char    *str, int   *arr_num, char  **arr_split)
 {
+	printf("ErrorAtoiTest1\n");
     int i;
 
     i = 0;
     if (str[i] == '\0')
-        ft_exit_error_free(ERROR, arr_num, arr_split);
+        ft_exit_error_free(ERROR1, arr_num, arr_split);
     while (ft_isspace(str[i]))
         i++;
     if (ft_isdigit(str[i]))
@@ -34,5 +36,5 @@ int ft_atoi(char    *str, int   *arr_num, char  **arr_split)
     else if (ft_issign(str[i]) && ft_isdigit(str[i + 1]))
         return (ft_atoi_logic(str, i + 1, arr_num, arr_split));
     else
-        return (ft_exit_error_free(ERROR, arr_num, arr_split));
+        return (ft_exit_error_free(ERROR2, arr_num, arr_split));
 }

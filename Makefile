@@ -1,8 +1,8 @@
 NAME	= bambuk_swap
 
-SRCS	= push_swap.c		ft_validation.c \		
-		  ./utils/ft_atoi.c	./utils/ft_atoi_logic \
+SRCS	=	  ./utils/ft_atoi_utils.c 	./utils/ft_atoi.c \
 		  ./utils/ft_exit.c	./utils/ft_split_utils.c	./utils/ft_split.c \
+		  ft_validation.c	push_swap.c
 
 OBJ	= $(SRCS:%.c=%.o)
 
