@@ -12,7 +12,7 @@ int	ft_exit_error(char	*error)
 	exit(0);
 }
 
-char	**ft_free_arr_split(char	**arr_split, int size)
+void	ft_free_arr_split(char	**arr_split, int size)
 {
 	int	i;
 
@@ -23,5 +23,4 @@ char	**ft_free_arr_split(char	**arr_split, int size)
 		i++;
 	}
 	free(arr_split);
-	return (NULL);
 }

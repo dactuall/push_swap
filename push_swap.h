@@ -39,5 +39,5 @@ int     ft_nums_count(char	**argv);
 /*FILE: ft_exit.c*/
 void    ft_putstr(char  *str);
 int	    ft_exit_error(char	*error);
-char	**ft_free_arr_split(char	**arr_split, int size);
+void	ft_free_arr_split(char	**arr_split, int size);
 # endif
