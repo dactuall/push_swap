@@ -12,19 +12,34 @@
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-# define ERROR1 "Error1\n"
-# define ERROR2 "Error2\n"
-# define ERROR3 "Error3\n"
-# define ERROR4 "Error4\n"
-# define ERROR5 "Error5\n"
-# define ERROR6 "Error6\n"
-# define ERROR7 "Error7\n"
-# define ERROR8 "Error8\n"
-# define ERROR9 "Error9\n"
+# define ERROR "Error\n"
 
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
+
+typedef struct s_list
+{
+	int				num;
+	int				index;
+	int				flag;
+	struct s_list	*next;
+	struct s_list	*prev;
+}	t_list;
+
+typedef struct s_all
+{
+	t_list	*a;
+	t_list	*b;
+	int		flags;
+	int		next;
+	int		min;
+	int		max;
+	int		med;
+	int		len_a;
+	int		len_b;
+}	t_all;
+
 /*FILE: ft_atoi_utils.c*/
 int ft_isint(long long int	x);
 int ft_isspace(char c);
@@ -52,4 +67,32 @@ int     ft_nums_count(char	**argv);
 void    ft_putstr(char  *str);
 int	    ft_exit_error(char	*error);
 void	ft_free_arr_split(char	**arr_split, int size);
+int		ft_free_all(char	*error, int	*arr_num, t_all	*all);
+/*FILE: ft_list.c*/
+void	ft_lstclear(t_all *all);
+t_list	*ft_lstnew(int	num, int	index);
+int		ft_lstadd_front(t_list	**lst, t_list	*new);
+t_list	*ft_lstlast(t_list	*lst);
+void	ft_lstadd_back(t_list	**lst, t_list	*new);
+/*FILE: ft_init.c*/
+t_all	*ft_init_t_all(int	*arr_num, int	nums);
+t_all	*ft_init(int	*arr_num, int	nums);
+/*FILE: ft_find.c*/
+t_list	*ft_find_prev(t_list	*lst);
+t_list	*ft_find_prev_prev(t_list	*lst);
+
+/*command*/
+void	pa(t_all	*all);
+void	pb(t_all	*all);
+void	ra(t_all	*all);
+void	rb(t_all	*all);
+void	rr(t_all	*all);
+void	rra(t_all	*all);
+void	rrb(t_all	*all);
+void	rrr(t_all	*all);
+void	sa(t_all	*all);
+void	sb(t_all	*all);
+void	ss(t_all	*all);
+
+
 # endif

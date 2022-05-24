@@ -22,17 +22,17 @@ int	*ft_validation(char	**argv)
 
 	arr_num = (int	*)malloc(ft_nums_count(argv) * sizeof (int));
 	if (!arr_num)
-		ft_exit_error(ERROR5);
+		ft_exit_error(ERROR);
 	i = 0;
 	k = 0;
 	while (argv[++i])
 	{
 		if (!argv[i][0])
-			ft_exit_error_free(ERROR6, arr_num, arr_split);
+			ft_exit_error_free(ERROR, arr_num, arr_split);
 		arr_split = ft_split(argv[i], ' ');
 		size = 0;
 		while (arr_split[size])
-			(arr_num)[k++] = ft_atoi(arr_split[size++], arr_num, arr_split);
+			arr_num[k++] = ft_atoi(arr_split[size++], arr_num, arr_split);
 		ft_free_arr_split(arr_split, size);
 	}
 	ft_check_dup(arr_num, ft_nums_count(argv));
@@ -54,7 +54,7 @@ void	ft_check_dup(int	*arr_num, int	nums)
 			if (arr_num[i] == arr_num[j])
 			{
 				free(arr_num);
-				ft_exit_error(ERROR7);
+				ft_exit_error(ERROR);
 			}
 			j++;
 		}
@@ -90,7 +90,7 @@ void	ft_is_num(char	*str)
 	{
 		if (!(ft_isdigit(*str) || (*str == ' ' || *str == '\t' 
             || *str == '-' || *str == '+')))
-			ft_exit_error(ERROR8);
+			ft_exit_error(ERROR);
 		else
 			str++;
 	}
@@ -109,7 +109,7 @@ int	ft_nums_count(char	**argv)
 		nums += ft_word_count(argv[i], ' ');
 	}
 	if (i > nums + 1)
-		return (ft_exit_error(ERROR9));
+		return (ft_exit_error(ERROR));
 	else if (nums < 2)
 		exit(0);
 	else

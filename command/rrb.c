@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   rrb.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dactuall <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/22 12:09:26 by dactuall          #+#    #+#             */
-/*   Updated: 2022/05/22 12:09:27 by dactuall         ###   ########.fr       */
+/*   Created: 2022/05/24 15:39:33 by dactuall          #+#    #+#             */
+/*   Updated: 2022/05/24 15:39:35 by dactuall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-int	main(int	argc, char	**argv)
+void	rrb(t_all	*all)
 {
-	t_all	*all;
+	t_list	*tmp_last;
+	t_list	*tmp;
 
-	if (argc < 2)
-		return (0);
-	all = ft_init(ft_validation(argv), ft_nums_count(argv));
-	//ft_sorting(all);
-	ft_free_all(NULL, NULL, all);
-	return (0);
+	if (all->b == NULL || ft_lstlast(all->b) == NULL)
+		return ;
+	tmp = all->b;
+	all->b = all->b->next;
+	tmp_last = ft_lstlast(all->b);
+	tmp_last->next = tmp;
+	tmp_last->next->next = NULL;
+	if (all->flags != -2)
+		ft_putstr("rrb");
 }
