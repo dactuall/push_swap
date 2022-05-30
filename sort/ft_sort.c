@@ -4,12 +4,12 @@ void	ft_sort(t_all	*all)
 {
 	if (!all)
 		return ;
-	if (all->len_a == 2) && (all->a->num < all->a->next->num))
+	if ((all->len_a == 2) && (all->a->num < all->a->next->num))
 		sa(all);
 	else if (all->len_a == 3)
 		ft_sort_3(all, all->a);
 	else if (all->len_a <= 5)
-		ft_sort_5(all, all->a);
+		ft_sort_5(all);
 	else
 		ft_sort_main(all);
 }

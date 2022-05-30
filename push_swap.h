@@ -99,5 +99,12 @@ void	ft_sort_3(t_all	*all, t_list	*lst);
 void	ft_sort_5(t_all	*all);
 void	ft_find_min(t_all	*all, t_list	*lst, int	len);
 int	ft_optimal_min(t_all	*all);
+/*FILE: ft_sort_main.c*/
+void	ft_sort_main(t_all	*all);
+void	ft_start_sort(t_all	*all, int	len_a);
+void	ft_sort_b(t_all	*all, int	len_b);
+void	ft_last_b_sort(t_all	*all);
+void	ft_add_flag(t_all	*all, t_list	**lst, int	flags);
+
 
 # endif
