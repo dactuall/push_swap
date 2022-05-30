@@ -93,6 +93,11 @@ void	rrr(t_all	*all);
 void	sa(t_all	*all);
 void	sb(t_all	*all);
 void	ss(t_all	*all);
-
+/*FILE: ft_sort.c*/
+void	ft_sort(t_all	*all);
+void	ft_sort_3(t_all	*all, t_list	*lst);
+void	ft_sort_5(t_all	*all);
+void	ft_find_min(t_all	*all, t_list	*lst, int	len);
+int	ft_optimal_min(t_all	*all);
 
 # endif
