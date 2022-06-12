@@ -15,9 +15,12 @@
 void	pa(t_all	*all)
 {
 	t_list	*tmp_prev;
-	
+
 	if (all->b == NULL || ft_lstlast(all->b) == NULL)
+	{
+		printf("%d\n", all->b->index);
 		return ;
+	}
 	if (all->len_b == 1)
 	{
 		ft_lstadd_back(&all->a, ft_lstlast(all->b));
@@ -29,8 +32,8 @@ void	pa(t_all	*all)
 		ft_lstadd_back(&all->a, ft_lstlast(all->b));
 		tmp_prev->next = NULL;
 	}
-	all->len_b--;
 	all->len_a++;
+	all->len_b--;
 	if (all->flags != -2)
 		ft_putstr("pa");
 }

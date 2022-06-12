@@ -15,12 +15,12 @@
 int	*ft_validation(char	**argv)
 {
 	char	**arr_split;
-	int	*arr_num;
-	int	i;
-	int	size;
-	int	k;
+	int		*arr_num;
+	int		i;
+	int		size;
+	int		k;
 
-	arr_num = (int	*)malloc(ft_nums_count(argv) * sizeof (int));
+	arr_num = (int *)malloc(ft_nums_count(argv) * sizeof (int));
 	if (!arr_num)
 		ft_exit_error(ERROR);
 	i = 0;
@@ -40,7 +40,7 @@ int	*ft_validation(char	**argv)
 	return (arr_num);
 }
 
-void	ft_check_dup(int	*arr_num, int	nums)
+void	ft_check_dup(int *arr_num, int nums)
 {
 	int	i;
 	int	j;
@@ -62,7 +62,7 @@ void	ft_check_dup(int	*arr_num, int	nums)
 	}
 }
 
-void ft_check_sort(int	*arr_num, int	nums)
+void	ft_check_sort(int *arr_num, int nums)
 {
 	int	i;
 	int	j;
@@ -88,8 +88,8 @@ void	ft_is_num(char	*str)
 {
 	while (*str)
 	{
-		if (!(ft_isdigit(*str) || (*str == ' ' || *str == '\t' 
-            || *str == '-' || *str == '+')))
+		if (!(ft_isdigit(*str) || (*str == ' ' || *str == '\t'
+					|| *str == '-' || *str == '+')))
 			ft_exit_error(ERROR);
 		else
 			str++;

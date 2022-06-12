@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dactuall <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/11 15:28:55 by dactuall          #+#    #+#             */
+/*   Updated: 2022/06/11 15:28:56 by dactuall         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 void	ft_sort(t_all	*all)
@@ -14,10 +26,10 @@ void	ft_sort(t_all	*all)
 		ft_sort_main(all);
 }
 
-void	ft_sort_3(t_all	*all, t_list	*lst)
+void	ft_sort_3(t_all *all, t_list *lst)
 {
 	if (lst->next->next->num > lst->next->num
-		&& lst->next->next->num > lst->num)
+		&& lst->num > lst->next->next->num)
 		sa(all);
 	else if (lst->num < lst->next->num
 		&& lst->next->num < lst->next->next->num)
@@ -35,41 +47,23 @@ void	ft_sort_3(t_all	*all, t_list	*lst)
 		ra(all);
 	}
 	else if (lst->next->next->num < lst->next->num
-		&& lst->num < lst->next-next->num)
+		&& lst->num < lst->next->next->num)
 		rra(all);
 }
 
 int	ft_optimal_min(t_all	*all)
 {
-	t_all	*tmp;
-	int	i;
+	t_list	*tmp;
+	int		i;
 
 	i = 0;
 	tmp = all->a;
-	while (tmp->next != all->min)
+	while (tmp->index != all->min)
 	{
 		i++;
 		tmp = tmp->next;
 	}
 	return (i);
-}
-
-void	ft_find_min(t_all	*all, t_list	*lst, int	len)
-{
-	t_all	*tmp;
-	int	i;
-	int	min;
-
-	i = 0;
-	tmp = lst;
-	min = tmp->index;
-	while (i != len)
-	{
-		if (tmp->index < min)
-			min = tmp->index;
-		tmp = tmp->next;
-	}
-	all->min = min;
 }
 
 void	ft_sort_5(t_all	*all)
@@ -90,7 +84,32 @@ void	ft_sort_5(t_all	*all)
 		}
 		pb(all);
 	}
-	ft_soring_3(all, all->a);
+	ft_sort_3(all, all->a);
 	while (all->len_b)
 		pa(all);
+}
+
+void	ft_unsort_3(t_all	*all)
+{
+	if (all->b->next->next->num > all->b->next->num
+		&& all->b->num > all->b->next->next->num)
+		rrb(all);
+	else if (all->b->num > all->b->next->num
+		&& all->b->next->num > all->b->next->next->num)
+	{
+		sb(all);
+		rrb(all);
+	}
+	else if (all->b->next->num < all->b->num
+		&& all->b->next->next->num > all->b->num)
+	{
+		sb(all);
+		rb(all);
+	}
+	else if (all->b->next->next->num < all->b->num
+		&& all->b->next->num > all->b->num)
+		rb(all);
+	else if (all->b->next->next->num < all->b->next->num
+		&& all->b->num < all->b->next->next->num)
+		sb(all);
 }

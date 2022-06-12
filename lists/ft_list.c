@@ -52,7 +52,7 @@ void	ft_lstclear(t_all *all)
 	free(all);
 }
 
-t_list	*ft_lstnew(int	num, int	index)
+t_list	*ft_lstnew(int num, int index)
 {
 	t_list	*new;
 
@@ -79,6 +79,7 @@ t_list	*ft_lstlast(t_list	*lst)
 void	ft_lstadd_back(t_list	**lst, t_list	*new)
 {
 	t_list	*last;
+
 	if (lst)
 	{
 		if (*lst)

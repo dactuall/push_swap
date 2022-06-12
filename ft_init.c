@@ -12,10 +12,10 @@
 
 #include "push_swap.h"
 
-t_all	*ft_init_t_all(int	*arr_num, int	nums)
+t_all	*ft_init_t_all(int *arr_num, int nums)
 {
 	t_all	*all;
-	
+
 	all = (t_all *)malloc(sizeof(t_all));
 	if (!all)
 		ft_exit_error_free(ERROR, arr_num, NULL);
@@ -29,7 +29,7 @@ t_all	*ft_init_t_all(int	*arr_num, int	nums)
 	return (all);
 }
 
-t_all	*ft_init(int	*arr_num, int	nums)
+t_all	*ft_init(int *arr_num, int nums)
 {
 	int		i;
 	int		j;

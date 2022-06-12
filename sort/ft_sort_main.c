@@ -1,8 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_main.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dactuall <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/11 15:27:19 by dactuall          #+#    #+#             */
+/*   Updated: 2022/06/11 15:27:21 by dactuall         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 void	ft_sort_main(t_all	*all)
 {
 	t_list	*tmp_last;
+
 	ft_start_sort(all, all->len_a);
 	while (all->len_b > 3)
 	{
@@ -26,7 +39,7 @@ void	ft_sort_main(t_all	*all)
 	}
 }
 
-void	ft_start_sort(t_all	*all, int	len_a)
+void	ft_start_sort(t_all *all, int len_a)
 {
 	t_list	*tmp_last;
 	t_list	*tmp_prev;
@@ -55,7 +68,7 @@ void	ft_start_sort(t_all	*all, int	len_a)
 	}
 }
 
-void	ft_sort_b(t_all	*all, int	len_b)
+void	ft_sort_b(t_all *all, int len_b)
 {
 	t_list	*tmp_last;
 	t_list	*tmp_prev;
@@ -104,7 +117,7 @@ void	ft_last_b_sort(t_all	*all)
 	pa_pa_del_ra_del_ra(all);
 }
 
-void	ft_add_flag(t_all	*all, t_list	**lst, int	flags)
+void	ft_add_flag(t_all *all, t_list **lst, int flags)
 {
 	t_list	*last;
 

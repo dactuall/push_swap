@@ -12,14 +12,14 @@
 
 #include "push_swap.h"
 
-int	main(int	argc, char	**argv)
+int	main(int argc, char	**argv)
 {
 	t_all	*all;
 
 	if (argc < 2)
 		return (0);
 	all = ft_init(ft_validation(argv), ft_nums_count(argv));
-	//ft_sorting(all);
+	ft_sort(all);
 	ft_free_all(NULL, NULL, all);
 	return (0);
 }

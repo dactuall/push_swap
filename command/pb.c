@@ -25,8 +25,8 @@ void	pb(t_all	*all)
 	}
 	else
 	{
-		tmp_prev = ft_find_prev(all->b);
-		ft_lstadd_back(&all->b, ft_lstlast(all->b));
+		tmp_prev = ft_find_prev(all->a);
+		ft_lstadd_back(&all->b, ft_lstlast(all->a));
 		tmp_prev->next = NULL;
 	}
 	all->len_a--;

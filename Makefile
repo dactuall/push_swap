@@ -8,7 +8,8 @@ SRCS	=	push_swap.c		ft_validation.c		ft_init.c \
 			./command/rb.c	./command/rr.c	./command/rra.c \
 			./command/rrb.c	./command/rrr.c	./command/sa.c \
 			./command/sb.c	./command/ss.c \
-			./sort/ft_sort.c	./sort/ft_sort_main.c
+			./sort/ft_sort.c	./sort/ft_sort_main.c \
+			./sort/ft_sort_main_utils.c	
 		  
 
 OBJ	= $(SRCS:%.c=%.o)
