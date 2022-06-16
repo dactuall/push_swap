@@ -17,10 +17,7 @@ void	pa(t_all	*all)
 	t_list	*tmp_prev;
 
 	if (all->b == NULL || ft_lstlast(all->b) == NULL)
-	{
-		printf("%d\n", all->b->index);
 		return ;
-	}
 	if (all->len_b == 1)
 	{
 		ft_lstadd_back(&all->a, ft_lstlast(all->b));

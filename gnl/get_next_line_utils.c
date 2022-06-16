@@ -35,7 +35,7 @@ char	*ft_strchar(const char	*str, int a)
 
 char	*ft_strncpy(char	*dest, char	*src, int len)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (src[i] != '\0' && i < len)
@@ -46,7 +46,7 @@ char	*ft_strncpy(char	*dest, char	*src, int len)
 	while (i < len)
 	{
 		dest[i] = '\0';
-		i++;		
+		i++;
 	}
 	return (dest);
 }

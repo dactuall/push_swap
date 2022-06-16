@@ -17,7 +17,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
+//# include <stdio.h>
 
 typedef struct s_list
 {
@@ -140,7 +140,5 @@ char	*ft_strjoin(char const *s1, char const *s2);
 void	buf_next_line(char	*buf, char	**s);
 char	*get_next_line(int fd);
 /*FILE: checker.c */
-int	ft_strncmp(const char *s1, const char *s2, int n);
-
-
+int		ft_strncmp(const char *s1, const char *s2, int n);
 #endif
