@@ -13,6 +13,7 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 # define ERROR "Error\n"
+# define BUFFER_SIZE 10
 
 # include <stdlib.h>
 # include <unistd.h>
@@ -129,5 +130,17 @@ t_list	*ft_find_prev_prev(t_list	*lst);
 void	ft_find_med(t_all	*all, t_list	*lst, int len);
 void	ft_find_min(t_all	*all, t_list	*lst, int len);
 void	ft_find_max(t_all	*all, t_list	*lst, int len);
+
+/*FILE: get_next_line_utils.c */
+char	*ft_strchar(const char	*str, int a);
+char	*ft_strncpy(char	*dest, char	*src, int len);
+char	*ft_strjoin(char const *s1, char const *s2);
+
+/*FILE: get_next_line.c */
+void	buf_next_line(char	*buf, char	**s);
+char	*get_next_line(int fd);
+/*FILE: checker.c */
+int	ft_strncmp(const char *s1, const char *s2, int n);
+
 
 #endif
